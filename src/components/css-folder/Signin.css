@@ -47,6 +47,8 @@
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
   }
   .signin button:hover{
     border: 1px solid  rgb(29, 93, 255);

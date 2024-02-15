@@ -1,43 +1,85 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { DevTool } from '@hookform/devtools';
-
-
-let renderCount = 0;
-type FormValues ={
-
-  fullName: string;
-  email: string;
-  password: string;
-}
-
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axiosClient from './GlobalApi'
+import Navbar from './Navbar'
 const Signup = () => {
-const form = useForm <FormValues> ();
-const { register,control,  handleSubmit } = form;
+  const [name,setName]=useState("");
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+  const [phone,setPhone]=useState("");
+  const [setErrMsg] = useState("")
 
-const onSubmit = (data:FormValues ) => {
-  console.log("Form submitted", data);
+  const SIGN_UP_URL = '/users';
+  const navigate = useNavigate()
+
+ const handleSubmit = async(e) =>{
+  e.preventDefault();
+   setEmail("")
+     setName("")
+     setPhone("")
+     setPassword("")
+   try{
+      const response = await axiosClient.post(SIGN_UP_URL, {name,email,password,phone});
+      console.log(response)
+     navigate('/signin')
+
+   }catch(err){
+    if(!err?.response){
+      setErrMsg('No server response');
+    }else if(err.response.status === 409){
+      setErrMsg('User name taken')
+    }else if (err.response.status === "failed"){
+      alert(err.response.message)
+    }
+   }
+ } 
+
+  return (
+    <section >
+    
+  <div >
+  <Navbar />
+
+
+      <div className='signin'>
+          <div className='inner-form'>
+              <h1 >
+                  Create an account
+              </h1>
+              <form onSubmit={handleSubmit}>
+                  <div>
+                      <label  >User Name</label>
+                      <input type="text" placeholder="Username" required value={name} onChange={(e)=> setName(e.target.value)} />
+                  </div>
+                  <div>
+                      <label >Your email</label>
+                      <input type="email" name="email" id="email"  placeholder="name@company.com" required value={email} onChange={(e)=> setEmail(e.target.value)} />
+                  </div>
+                  <div>
+                      <label >Password</label>
+                      <input type="password" name="password" id="password" placeholder="••••••••"  required value={password} onChange={(e)=> setPassword(e.target.value)} />
+                  </div>
+                  <div>
+                      <label className="block mb-2 text-sm font-medium text-gray-900 ">Phone Number</label>
+                      <input type="phone" name="phone" placeholder="+03232......"  required value={phone} onChange={(e)=> setPhone(e.target.value)} />
+                  </div>
+                  <div >
+                      
+                      <div >
+                        <label >Already have an account! <a  href='/signin'>Sign In</a></label>
+                      </div>
+                  </div>
+                  <button  
+                   type="submit" >Create an account</button>
+              
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+  )
 }
 
-renderCount++;
-  return (
-    <>
-      <form className='signin' onSubmit={handleSubmit(onSubmit)}>
-        <div className='inner-form'>
-          <h1>Sign In</h1>
-          <label>Full Name</label> <br />
-          <input type="text" id='fullName' {...register('fullName')} /> <br />
-          <label>Email</label> <br />
-          <input type="email"  id='email' {...register('email')} /> <br />
-          <label>Password</label> <br />
-          <input type="password" id='password' {...register('password')} /> <br />
-          <p>Already have an account? <a href="signin">Sign In</a></p>
-          <button type="submit">SIGN UP</button>
-        </div>
-      </form>
-      <DevTool />
-    </>
-  );
-};
+export default Signup
 
-export default Signup;
+
