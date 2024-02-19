@@ -93,12 +93,14 @@
    outline: none;
    border: none;
    padding: 10px 50px;
+   border-radius: 13px;
    background-color: rgb(29, 93, 255); 
    color: white;
   }
  .form2 button:hover{
    background-color: rgba(128, 128, 128, 0);
    color: white;
+   font-weight: 900;
    cursor: pointer;
    border: 1px solid white;
     transition: .2s;
