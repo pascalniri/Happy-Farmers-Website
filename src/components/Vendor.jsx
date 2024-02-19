@@ -1,11 +1,9 @@
 import React from 'react'
 import './css-folder/Vendor.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import { Link } from 'react-router-dom';
 const Vendor = () => {
   return (
     <section className='vendor-bg'>
-      <Navbar/>
     <div className='vendor'>
         <h2>Are You a Hotel, Motel or a Restourant.</h2>
         <p>
@@ -14,9 +12,8 @@ const Vendor = () => {
             2. Elevate your menu with quality ingredients.<br/>
             3. Click to register and simplify your supply chain!
         </p>
-        <button>REGISTER</button>
+        <Link to={`${'/join'}`}><button>REGISTER</button></Link>
     </div>
-    <Footer/>
     </section>
   )
 }

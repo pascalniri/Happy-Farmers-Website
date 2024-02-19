@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 const Join = () => {
   return (
     <section className='join-bg'>
-      <Navbar/>
       <div className='join'>
        <h2>Are You a Hotel, Motel or a Restourant.</h2>
         <p>
@@ -13,7 +12,7 @@ const Join = () => {
         Once we`ve confirmed your subscription, you’ll gain access to exclusive materials, news and updates.
         </p>
     <div className='form2'>
-        <label>Buyer Name</label>
+        <label>Vendor's Name</label>
          <input type="text" />
          <label>Email</label>
          <input type="email" />
@@ -33,7 +32,6 @@ const Join = () => {
      </div>
        
     </div>
-    <Footer/>
     </section>
     
   )

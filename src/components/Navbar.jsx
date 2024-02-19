@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './css-folder/Navbar.css';
+import { FaShoppingCart } from "react-icons/fa";
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,21 +12,21 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <div className="navbar">
+      <img src="" alt="" />
       <ul>
-        <li><a href="#">LOGO</a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Shop</a></li>
-        <li>
-           <select>
-              <option value=""><a href="#">Vendors</a></option>
-              <option value="">Hotels</option>
-              <option value="">Farmers</option>
-           </select>
-        </li>
+        <li>LOGO</li>
+        <li><a href="/">Home</a></li>
+        <li><a href="shop">Shop</a></li>
+        <li><a href="about">About</a></li>
+        <Link to={`${'/vendor'}`}>
+           <li>Vendors</li>
+        </Link>
       </ul>
-    </nav>
+      <div className="cart-icon">
+      <FaShoppingCart />
+      </div>
+    </div>
   );
 }
 
