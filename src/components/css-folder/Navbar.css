@@ -64,26 +64,4 @@
     display: block;
     cursor: pointer;
   }
-  .listOption ul {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding-left: 0;
-  }
-  .listOption ul li {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-    border-bottom: 1px solid #555;
-  }
-  .listOption ul li:last-child {
-    border-bottom: none;
-  }
-  .listOption ul.show {
-    display: flex;
-  }
 }

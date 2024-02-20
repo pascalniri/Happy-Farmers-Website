@@ -21,7 +21,7 @@ function Navbar() {
       </div>
       <div className='nav-signin'>
           <button><Link to="/signin">SIGN IN</Link></button>
-          <Link to ="/checkout"className='cart'><FaCartShopping /><stron>{cart.cart.length}</stron></Link>
+          <Link to ="/checkout"className='cart'><FaCartShopping /><strong>{cart.cart.length}</strong></Link>
       </div>
     </nav>
   );
