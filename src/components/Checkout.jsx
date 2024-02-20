@@ -13,12 +13,12 @@ const Checkout = () => {
             return(
                 <div className='checkout_product'>
                   
-                  <div className='product_info'>
+                  
                     <img src={item.image} alt="" />
                     <h4>{item.name}</h4>
                     <p>{item.price}</p>
-                    <button onClick={() => dispatch(removefromcart(item.id))}>Remove From Cart</button>
-                  </div>    
+                    <button onClick={(item) => dispatch(removefromcart(item.id))}>Remove From Cart</button>
+   
                 </div>
             )
            })}
