@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './components/Home';
 import Vendor from './components/Vendor.jsx';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Join from './components/Join.jsx';
 import Signin from './components/Signin.jsx';
 import Signup from './components/Signup.jsx';
@@ -13,7 +13,7 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 };
 
