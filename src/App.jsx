@@ -1,22 +1,22 @@
 import React from 'react';
 import Home from './components/Home';
-import Vendor from './components/Vendor.jsx';
+import Vendor from './components/Vendor';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Join from './components/Join.jsx';
-import Signin from './components/Signin.jsx';
-import Signup from './components/Signup.jsx';
-import Shop from './components/Shop.jsx';
-import Products from './components/Products.jsx';
-import Cart from './components/Cart.jsx';
-import Checkout from './components/Checkout.jsx';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer.jsx';
+import Join from './components/Join';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
+import Shop from './components/Shop';
+import Products from './components/Products';
+import Cart from './components/Cart';
+import Checkout from './components/Checkout';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/vendor" element={<Vendor />} />
         <Route path="/join" element={<Join />} />
         <Route path="/signin" element={<Signin />} />
