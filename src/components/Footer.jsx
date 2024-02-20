@@ -2,14 +2,14 @@ import React from 'react'
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
-
-
+import hf from '../components/images/hf.png';
+import '../index.css'
 const Footer = () => {
   return (
    
         <div className='footer-container' >
             <div className='footer-subcontainer'>
-                 <img src="./images/logo.png" alt=''/>
+                 <img src={hf} alt=''/>
             </div>
 
             <div className='footer-subcontainer'>

@@ -1,0 +1,10 @@
+.op-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 100px;
+}
+.op-subcontainer img{
+   width: 60% ;
+}

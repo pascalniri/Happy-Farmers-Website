@@ -1,7 +1,6 @@
 import React from 'react'
 import './css-folder/Signin.css';
 import {  useForm} from 'react-hook-form';
-import Navbar from './Navbar';
 
 
 
@@ -24,7 +23,6 @@ const Signin = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Navbar/>
       <div className='signin'>
        <div className='inner-form'>
         <h1>Sign In</h1>

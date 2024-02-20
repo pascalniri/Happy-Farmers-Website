@@ -1,66 +1,89 @@
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  .navbar-toggle {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .open-icon, .close-icon {
-    color: white;
-    font-size: 24px;
-    display:block;
-  }
-  
-  .navbar-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: none;
-  }
-  
-  .navbar-links li {
-    float: left;
-  }
-  
-  .navbar-links li a {
-    display: block;
-    padding: 20px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar-links li a:hover {
-    background-color: #111;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+}
 
-  @media screen and (min-width: 768px) {
-    .navbar-toggle .close-icon {
-      display: none;
-    }
+.logo h1 {
+  margin: 0;
+}
+
+.listOption ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.listOption ul li {
+  margin-right: 20px;
+}
+
+.listOption ul li:last-child {
+  margin-right: 0;
+}
+
+.listOption ul li a {
+  text-decoration: none;
+  color: #fff;
   
-    .navbar-links {
-      display: flex;
-      justify-content: flex-end;
-    }
+}
+
+.nav-signin button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-signin button a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-signin .cart{
+  color: rgb(255, 166, 0);
+  font-size: 25px;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
   
-    .navbar-links li {
-      margin-left: 20px;
-    }
-  
-    .navbar-links li:first-child {
-      margin-left: 0;
-    }
+  .navbar {
+    justify-content: space-between;
   }
-  
-  .active {
-    display: flex;
+  .logo {
+    flex: 1;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .listOption ul {
+    display: none;
     flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
+    padding-left: 0;
   }
-  
+  .listOption ul li {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+  }
+  .listOption ul li:last-child {
+    border-bottom: none;
+  }
+  .listOption ul.show {
+    display: flex;
+  }
+}

@@ -1,11 +1,13 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
 import red from './images/red.jpg'
+import '../index.css'
 import about from './images/about.png'
 import us1 from './images/us1.jpg'
 import us2 from './images/us2.jpg'
 import us3 from './images/us3.jpg'
-
+import map from './images/map.png'
+import { Link } from 'react-router-dom';
 
 const Body2 = () => {
   return (
@@ -32,9 +34,7 @@ const Body2 = () => {
                and wholesome goodness!
            </p> 
                <br/>
-           <button>
-            Shop All <FaArrowRight />
-           </button>
+              <Link to="/shop"><button>Shop All <FaArrowRight /> </button></Link>
         </div>
       </div>
       </section>
@@ -131,10 +131,10 @@ const Body2 = () => {
           
         </div>
         <div className="box">
-          <img src={us2} alt="" />
+          <img src={us3} alt="" />
         </div>
         <div className="box">
-          <img src={us3} alt="" />
+          <img src={us2} alt="" />
         </div>
     </div>
 
@@ -161,22 +161,10 @@ const Body2 = () => {
 
   
   <section>
-  <div className='form'>
-        <div className='sub-form'>
-         <div className='labels'>        
-            <label>Full Name</label>
-            <input type='text' name='name'/>
-
-            <label>Email</label>
-            <input type='email' name='email'/>
-         </div>
-
-            <label>Message</label>
-            <textarea></textarea>
-
-            <button>SUBMIT</button>
-      </div>
-      </div>
+ 
+  <a href="https://www.google.com/maps/place/kLab/@-1.9431073,30.0848081,15.28z/data=!4m6!3m5!1s0x19dca6eb4b136305:0xfa7ecaf4c40f3383!8m2!3d-1.9394677!4d30.0907233!16s%2Fg%2F11c1xjm917?entry=ttu">
+    <img src={map} alt="" style={{width:"100%",height:'300px', border:'1px solid black', display:'flex', justifyContent:'center', alignItems:'center'}}/>
+  </a>
   </section>
 
   </>

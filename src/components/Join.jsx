@@ -1,11 +1,10 @@
 import React from 'react'
 import Footer from './Footer'
 import './css-folder/Vendor.css';
-import Navbar from './Navbar';
+
 const Join = () => {
   return (
     <section className='join-bg'>
-      <Navbar/>
       <div className='join'>
        <h2>Are You a Hotel, Motel or a Restourant.</h2>
         <p>
@@ -33,7 +32,6 @@ const Join = () => {
      </div>
        
     </div>
-    <Footer/>
     </section>
     
   )

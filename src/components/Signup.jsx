@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import axiosClient from './GlobalApi'
-import Navbar from './Navbar'
+// import axiosClient from './GlobalApi'
 const Signup = () => {
   const [name,setName]=useState("");
   const [email,setEmail]=useState("");
@@ -38,9 +37,6 @@ const Signup = () => {
     <section >
     
   <div >
-  <Navbar />
-
-
       <div className='signin'>
           <div className='inner-form'>
               <h1 >
