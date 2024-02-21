@@ -13,10 +13,10 @@ function Navbar() {
       </div>
       <div className='listOption'>
         <ul>
-           <li><a href="/">Home</a></li>
-           <li><Link to="/shop">Shop</Link></li>
-           <li><a href="/blog">Blog</a></li>
-           <li><a href="/vendor">Vendors</a></li>
+           <li><a href="/">HOME</a></li>
+           <li><Link to="/shop">SHOP</Link></li>
+           <li><a href="/blog">BLOG</a></li>
+           <li><a href="/vendor">VENDORS</a></li>
         </ul>
       </div>
       <div className='nav-signin'>
