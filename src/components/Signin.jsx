@@ -7,7 +7,7 @@ const Signin = () => {
 
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
-    const [success,setSuccess] = useState(false);
+    // const [success,setSuccess] = useState(false);
   
     const LOGIN_URL = '/users/login';
     const navigate = useNavigate()
@@ -28,7 +28,7 @@ const Signin = () => {
         if(err.status === 401){
       
          alert(" Invalid Entry")
-            navigate('/Signup');
+            navigate('/shop');
         }
 
     }
@@ -44,10 +44,10 @@ const Signin = () => {
   <div className='signin'>
       
       
-      <div >
+      <div className='inner-form'>
           <div >
               <h1 >
-                  Sign in to your account
+                  Sign In
               </h1>
               <form onSubmit={handleSubmit}>
                   <div>
@@ -61,23 +61,14 @@ const Signin = () => {
                   </div>
 
                   <div >
-                      <div >
-                          <div>
-                            <input  aria-describedby="remember" type="checkbox"  required />
-                          </div>
-
-                          <div className="ml-3 text-sm">
-                            <label htmlFor="remember" >Remember me</label>
-                          </div>
+                      <div >                       
                       </div>
-
-                      <a href="#" >Forgot password?</a>
                   </div>
-
-                  <button type="submit" >Sign in</button>
                   <p>
-                      Dont have an account yet? <Link  to={`${'/Signup'}`} >Sign up</Link>
+                      Dont have an account ? <Link  to={`${'/Signup'}`} >Sign Up</Link>
                   </p>
+                  <button type="submit" >Sign in</button>
+                  
               </form>
           </div>
       </div>

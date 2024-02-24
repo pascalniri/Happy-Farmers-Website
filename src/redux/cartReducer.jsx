@@ -21,7 +21,7 @@ export function cartReducer (state = initialState, action) {
             const index = state.cart.findIndex((cartItem) => cartItem.id === action.id)
             let newCart = [...state.cart]
             if(index >= 0){
-                newCart.slice(index, 1)
+                newCart.splice(index, 1)
             } else{
                 console.warn("Can not delete")
             }

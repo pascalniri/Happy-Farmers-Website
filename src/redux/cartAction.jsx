@@ -1,10 +1,11 @@
-export function addtocart(id, name, price){
+export function addtocart(id, name, price, image){
     return{
         type: "Add_Item_To_Cart",
         item: {
             id: id,
             name: name,
-            price: price
+            price: price,
+            image: image
         }
     }
 }

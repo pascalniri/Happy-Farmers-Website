@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addtocart } from '../redux/cartAction';
 
 
-const Products = ({id, image, name, price}) => {
+function Products({id, image, name, price}) {
 
     const dispatch = useDispatch();
   return (

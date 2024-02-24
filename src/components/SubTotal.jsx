@@ -8,7 +8,7 @@ const SubTotal = () => {
   return (
     <div className='subtotal'>
         <div className='subtotal_area'>
-            <p>Subtotal ({cart.cart.length} item(s)) : {getTotal(cart.cart)}</p>
+            <p>Subtotal ({cart.cart.length} item(s)) : {getTotal(cart.cart)}Rwf</p>
             <button>Proceed To Checkout</button>
         </div>
 

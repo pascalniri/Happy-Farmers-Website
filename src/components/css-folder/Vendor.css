@@ -14,7 +14,7 @@
    background-size: cover;
    height: 100%;
    margin-top: -0px;
-   /* margin-bottom: -0px; */
+   margin-bottom: -100px;
 }
 .vendor h2{
     font-size: 50px;
@@ -125,7 +125,7 @@
     background-repeat: repeat-y;
     min-height: 100vh;
     margin-top: -0px;
-    margin-bottom: -0px;
+    margin-bottom: -100px;
  }
 
  
