@@ -20,17 +20,25 @@ const Signup = () => {
      setPassword("")
    try{
       const response = await axiosClient.post(SIGN_UP_URL, {name,email,password,phone});
-      console.log(response)
+      // console.log(response)
      navigate('/signin')
 
-   }catch(err){
+   }
+   catch(err){
     if(!err?.response){
       setErrMsg('No server response');
-    }else if(err.response.status === 409){
+    }
+    else if(err.response.status === 409){
       setErrMsg('User name taken')
-    }else if (err.response.status === "failed"){
+    }
+    else if (err.response.status === "failed"){
       alert(err.response.message)
     }
+   }
+   if(password === undefined || email === undefined){
+      alert('Please enter a password')
+   }else{
+    alert('User registered successfully')
    }
  } 
 
@@ -46,19 +54,19 @@ const Signup = () => {
               <form onSubmit={handleSubmit}>
                   <div>
                       <label  >User Name</label>
-                      <input type="text" placeholder="Username" required value={name} onChange={(e)=> setName(e.target.value)} />
+                      <input type="text" required value={name} onChange={(e)=> setName(e.target.value)} />
                   </div>
                   <div>
                       <label >Your email</label>
-                      <input type="email" name="email" id="email"  placeholder="name@company.com" required value={email} onChange={(e)=> setEmail(e.target.value)} />
+                      <input type="email" name="email" id="email"  required value={email} onChange={(e)=> setEmail(e.target.value)} />
                   </div>
                   <div>
                       <label >Password</label>
-                      <input type="password" name="password" id="password" placeholder="••••••••"  required value={password} onChange={(e)=> setPassword(e.target.value)} />
+                      <input type="password" name="password" id="password"  required value={password} onChange={(e)=> setPassword(e.target.value)} />
                   </div>
                   <div>
-                      <label className="block mb-2 text-sm font-medium text-gray-900 ">Phone Number</label>
-                      <input type="phone" name="phone" placeholder="+03232......"  required value={phone} onChange={(e)=> setPhone(e.target.value)} />
+                      <label >Phone Number</label>
+                      <input type="phone" name="phone"  required value={phone} onChange={(e)=> setPhone(e.target.value)} />
                   </div>
                   <div >
                       

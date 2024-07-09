@@ -11,16 +11,15 @@ import { Link } from 'react-router-dom';
 
 const Body2 = () => {
   return (
-    <>
+    <div >
 
-      <section>
-      <div className='bodytwo-container'>
-        <div className='bodytwo-subcontainer'>
-          <img src={red} alt="" />
+      <section className='mt-[100px] flex flex-row justify-between items-center px-4 sm:px-[50px] lg:px-[100px] py-4'>
+        <div className='w-full h-full'>
+          <img src={red} alt="" className='w-[500px] h-[400px] rounded-[20px]' />
         </div>
-        <div className='bodytwo-subcontainer'>
-            <h2>Pick Them Daily</h2>
-           <p>
+        <div className='w-full font-outfit flex flex-col'>
+            <h2 className='font-semibold text-[25px] mb-[20px]'>Pick Them Daily</h2>
+           <p className='text-[#656565]'>
              Welcome to Happy Farmers' "Pick Them Day" 
              a special occasion that brings you closer to the
               heart of our farm! Join us in the joyous experience of hand-picking
@@ -33,10 +32,9 @@ const Body2 = () => {
               a memorable, cost-effective celebration of community, agriculture,
                and wholesome goodness!
            </p> 
-               <br/>
-              <Link to="/shop"><button>Shop All <FaArrowRight /> </button></Link>
+               
+              <Link to="/shop"><button className='bg-green-500 px-[40px] py-[10px] rounded-[50px] text-white mt-[20px] hover:bg-white hover:text-green-500 hover:border hover:border-green-500'>Shop All</button></Link>
         </div>
-      </div>
       </section>
 
 
@@ -44,20 +42,10 @@ const Body2 = () => {
 
 
 
-
-     <section>
-     <div className='wwa'>
-          <h1>Who We Are</h1>
-      </div>
-     </section>
-
-
-
-
-
-      <section>
-      <div className='bodythree-container'>
-        <div className='bodythree-subcontainer'>
+        
+      <div className='flex flex-row justify-between gap-[50px] items-center my-[100px] px-4 sm:px-[50px] lg:px-[100px] py-4'>
+        <div className='w-full font-outfit text-[#656565]'>
+          <h1 className='mb-[20px] font-bold text-[25px] text-black'>Who We Are</h1>
             <p>
             Welcome to Happy Farmers, a vision realized by three passionate
              young ladies from Rwanda with a shared commitment to transfor
@@ -68,20 +56,13 @@ const Body2 = () => {
              we believe in the power of agro-tech to bring positive change.
             </p>
         </div>
-        <div className='bodythree-subcontainer'>
-          <img src={about} alt="" />
+        <div className='w-full'>
+          <img src={about} alt="" className='w-[500px] h-[400px] ' />
         </div>
       </div>
-      </section>
+  
 
-
-
-
-
-
-
-      <section>
-      <div className='body3-long-para'>
+      <div className='px-4 sm:px-[50px] lg:px-[100px] py-4 font-outfit text-[#656565]'>
         <p>
         Our journey is rooted in a profound love for agriculture and a
          desire to leverage technological advancements for sustainable, 
@@ -93,23 +74,18 @@ const Body2 = () => {
          and agriculture becomes a catalyst for positive change.
         </p>
       </div>
-      </section>
+     
 
-
-
-
-
-
-    <section>
-      <div className='wwa-container'>
-        <div className='wwa'>
+   
+        <div className='px-4 sm:px-[50px] lg:px-[100px] py-4 my-[100px]'>
+        <div className='bg-yellow-500  rounded-[20px] flex flex-col justify-center items-center px-[20px] py-[50px] font-outfit'>
           <h4>"Life is always better with mushrooms, especially when 
             shared with a friend who 
              appreciates the magic  of their earthy charm."</h4>
-             <p>- At Home Cooker -</p>
+             <p className='font-semibold mt-2'>- At Home Cooker -</p>
         </div>
-      </div>
-    </section> 
+        </div>
+ 
 
 
 
@@ -117,49 +93,25 @@ const Body2 = () => {
 
 
    <section>
-   <div className='ofm'>
-        <h1>Our Fresh Mushrooms</h1>
-        <p>
+   <div className='flex flex-col justify-center items-center text-center font-outfit px-4 sm:px-[50px] lg:px-[100px] py-4 my-[100px]'>
+        <h1 className='font-bold text-[25px] mb-[20px]'>Our Fresh Mushrooms</h1>
+        <p className='mb-[40px] text-[#656565]'>
           Primarily, our focus is on producing and delivering exceptional 
           quality mushrooms, ensuring freshness and nutritional value in every product. Simultaneously, we're developing an innovative online platform that bridges the gap between mushroom farmers and consumers, 
           facilitating direct access to the freshest produce.
         </p>
   
-    <div className="three-containers">
-        <div className="box">
-           <img src={us1} alt="" />
+    <div className=" flex flex-row justify-center items-center gap-[20px] w-full">
+       <img src={us1} alt="" className='w-[300px] h-[400px] rounded-[10px]' />
+       <img src={us2} alt="" className='w-[300px] h-[400px] rounded-[10px]'/>
+       <img src={us3} alt=""className='w-[300px] h-[400px] rounded-[10px]' />
           
-        </div>
-        <div className="box">
-          <img src={us3} alt="" />
-        </div>
-        <div className="box">
-          <img src={us2} alt="" />
-        </div>
     </div>
 
 
     </div>
    </section>
     
-
-
-
-
-
-   <section>
-      <div className='wwa'>
-            <h1>Contact Us</h1>
-             <p>TEL: (+250) 789139313 / happyfarmers2024@gmail.com</p>
-      </div>
-   </section>
-
-
-
-
-
-
-  
   <section>
  
   <a href="https://www.google.com/maps/place/kLab/@-1.9431073,30.0848081,15.28z/data=!4m6!3m5!1s0x19dca6eb4b136305:0xfa7ecaf4c40f3383!8m2!3d-1.9394677!4d30.0907233!16s%2Fg%2F11c1xjm917?entry=ttu">
@@ -167,7 +119,7 @@ const Body2 = () => {
   </a>
   </section>
 
-  </>
+  </div>
   )
 }
 
