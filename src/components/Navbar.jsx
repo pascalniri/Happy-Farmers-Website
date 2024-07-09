@@ -25,12 +25,14 @@ const Navbar = () => {
                         <li className="my-4 lg:my-0 text-white font-bold"><Link to="/shop">SHOP</Link></li>
                         <li className="my-4 lg:my-0 text-white font-bold"><Link to="/vendors">VENDORS</Link></li>
                         <li className="my-4 lg:my-0 text-white font-bold"><Link to="/contact">CONTACT US</Link></li>
-                        <li className="my-4 lg:my-0 lg:hidden bg-white text-green-500 font-outfit px-[30px] py-[10px] rounded-[50px] hover:bg-green-500 hover:border-[1px] hover:border-white hover:text-white"><a href="#">Sign in</a></li>
+                        <li className="my-4 lg:my-0 lg:hidden bg-white text-green-500 font-outfit px-[30px] py-[10px] rounded-[50px] hover:bg-green-500 hover:border-[1px] hover:border-white hover:text-white"><Link to="/signin">Sign in</Link></li>
                     </ul>
                 </nav>
+                <Link to="/signin">
                 <button className="hidden lg:block bg-white text-green-500 font-outfit px-[30px] py-[10px] rounded-[50px] hover:bg-green-500 hover:border-[1px] hover:border-white hover:text-white">
                     Sign in
                 </button>
+                </Link>
                 <div className="lg:hidden">
                     <button onClick={toggleMenu}>
                         <FaBars size={30} className="text-white" />
